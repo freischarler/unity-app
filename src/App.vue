@@ -1,30 +1,39 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <router-view></router-view>
 </template>
 
+<script>
+  import Footer from '@/components/Footer.vue'
+  //import UnityLayout from '@/modules/unity/layout/UnityLayout.vue'
+  //import { defineAsyncComponent } from 'vue' 
+//import UnityLayout from './modules/unity/layout/UnityLayout.vue'
+
+  export default {
+    name: 'App',
+    components: {
+      Footer,
+      //UnityLayout: defineAsyncComponent(() => import((/* webpackChunkName: "UnityLayout" */ '@/modules/unity/layout/UnityLayout.vue')))
+    }
+  }
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
 
-#nav {
-  padding: 30px;
-}
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  body{
+      background: #fafafa;
+      font-family: sans-serif;
+  }
 </style>
